@@ -1,0 +1,44 @@
+{
+  "name": "promptpad-note",
+  "version": "1.0.0",
+  "description": "Pluggable & Headless Note & Prompt Management for Node.js (MongoDB) and React",
+  "type": "module",
+  "main": "./shared/dist/index.js",
+  "types": "./shared/dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./shared/dist/index.d.ts",
+      "default": "./shared/dist/index.js"
+    },
+    "./server": {
+      "types": "./server/dist/index.d.ts",
+      "default": "./server/dist/index.js"
+    },
+    "./react": {
+      "types": "./client/dist/index.d.ts",
+      "import": "./client/dist/index.js",
+      "require": "./client/dist/index.cjs"
+    },
+    "./react/style.css": "./client/dist/style.css"
+  },
+  "typesVersions": {
+    "*": {
+      "server": [
+        "./server/dist/index.d.ts"
+      ],
+      "react": [
+        "./client/dist/index.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "build": "npm run build --prefix shared && npm run build --prefix server && npm run build --prefix client",
+    "install:all": "npm install && npm install --prefix shared && npm install --prefix server && npm install --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
