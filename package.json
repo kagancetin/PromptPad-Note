@@ -40,5 +40,10 @@
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
-  }
+  },
+  "files": [
+    "shared/dist",
+    "server/dist",
+    "client/dist"
+  ]
 }
