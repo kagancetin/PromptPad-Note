@@ -67,7 +67,7 @@ PromptPad-Note/
 
 ```bash
 # Clone the repository
-git clone https://github.com/ismetcetin/PromptPad-Note.git
+git clone https://github.com/kagancetin/PromptPad-Note.git
 cd PromptPad-Note
 
 # Install dependencies across all packages
@@ -251,4 +251,4 @@ npm run install:all
 
 ## 📄 License
 
-MIT © [İsmet Çetin](https://github.com/ismetcetin)
+MIT © [İsmet Çetin](https://github.com/kagancetin)
