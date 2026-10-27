@@ -1,0 +1,25 @@
+# Development and Source
+node_modules/
+.git/
+.github/
+.vscode/
+.idea/
+*.log
+.env*
+!.env.example
+client/src/
+server/src/
+shared/src/
+client/node_modules/
+server/node_modules/
+shared/node_modules/
+scratch/
+test_*.js
+test_*.mjs
+test_*.ts
+client/public/
+client/index.html
+client/vite.config.*
+client/tsconfig*
+server/tsconfig*
+shared/tsconfig*
