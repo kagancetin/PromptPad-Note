@@ -30,14 +30,12 @@ export default defineConfig({
         "react",
         "react-dom",
         "react/jsx-runtime",
-        "promptpad-note-shared",
       ],
       output: {
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
           "react/jsx-runtime": "jsxRuntime",
-          "promptpad-note-shared": "PromptPadShared",
         },
         assetFileNames: (assetInfo) => {
           if (assetInfo.name?.endsWith(".css")) return "style.css";

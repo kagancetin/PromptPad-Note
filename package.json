@@ -1,6 +1,6 @@
 {
   "name": "promptpad-note",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Pluggable & Headless Note & Prompt Management for Node.js (MongoDB) and React",
   "type": "module",
   "main": "./shared/dist/index.js",
@@ -12,7 +12,8 @@
     },
     "./server": {
       "types": "./server/dist/index.d.ts",
-      "default": "./server/dist/index.js"
+      "import": "./server/dist/index.js",
+      "require": "./server/dist/index.cjs"
     },
     "./react": {
       "types": "./client/dist/index.d.ts",
